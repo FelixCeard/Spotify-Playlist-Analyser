@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>Spotify analyser</title>
+    <!-- <link rel="stylesheet" href="/home.css"> -->
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style/home.css') }}">
+</head>
+<body>
+    <header>
+        <h1>
+            Spotify Playlist Analyser
+        </h1>
+    </header>
+
+    <!-- enter the link -->
+    <div>
+        <form action="/app" method="get">
+            <input type="text" name="url" id="url" placeholder="The link to the playlist">
+            <input type="submit" value="Anal (is) my Playlist" id="submit">
+        </form>
+    </div>
+</body>
+</html>

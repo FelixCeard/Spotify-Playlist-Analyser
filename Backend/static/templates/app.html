@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <!-- JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- For charts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+
+
+    <script src="{{url_for('static', filename='scripts/get_ressources.js')}}"></script>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style/app.css') }}">
+    <title>Spotify Analyser</title>
+</head>
+<body>
+    <h1>App</h1>
+    <div id="App">
+        <div class="Name">
+            <span id="name"></span>
+            <div id="profile_image">
+
+            </div>
+        </div>
+    </div>
+    <!-- template -->
+    <div id='hide'>
+        <div id = 'content'>
+            <div id = 'collab' class = 'box'>
+                <header>
+                    <span></span>
+                </header>
+                <div class="content">
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

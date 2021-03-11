@@ -1,0 +1,44 @@
+<script src="anime.min.js"></script>
+<script src="jquery-3.6.0.slim.min.js"></script>
+
+  <div id="centered">
+
+  </div>
+
+<script>
+  let title = document.createElement('Span');
+  title.innerText = "";
+  title.id = 'title';
+  $('#centered')[0].append(title);
+  let t1 = anime.timeline({
+        loop: false
+  });
+  function type_animation(text, t){
+    for (let i = 0; i < text.length; i++) {
+        let element = text[i];
+        t.add({
+            target: title,
+            duration: 100,
+            complete: function (anime) {
+                title.innerText += element
+            }
+        })
+    }
+}
+
+t1.add({
+  target: title,
+  color: '#7f1323',
+  duration: 1000,
+  complete: function(anim) {
+    console.log("ee");
+    // type_animation("title", t1)
+  },
+  add: {
+  target: 'body',
+  duration: 1000,
+  backgroundColor: '#5235ef'
+}
+})
+type_animation("title", t1)
+</script>
